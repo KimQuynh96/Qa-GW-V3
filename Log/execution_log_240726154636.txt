@@ -1,0 +1,18 @@
+LOGIN
+Input ID
+Input Pass
+Click on button login
+MENU BOARD
+Click on menu Board
+Settings
+Click on sub menu Settings
+Folders : Add
+Input folder name
+Click on button save
+Create folder
+Folders : Edit
+Input name edit
+Click on button save edit
+Edit folder
+Folders : Delete
+Click on button delete

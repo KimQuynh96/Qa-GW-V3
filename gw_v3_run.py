@@ -5,7 +5,7 @@ from gw_v3_board import MenuBoard
 def run(domain,user,password) :
     Check_login = Login(domain,user,password)
     if  Check_login == True :
-        #MenuMail()
+        MenuMail()
         MenuBoard()
         
         

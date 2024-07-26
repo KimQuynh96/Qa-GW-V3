@@ -128,6 +128,7 @@
         "org_share":"//span[contains(.,'Save')]",
         "org_list_share":".px-2 > span:nth-child(1)"
         
+        
     },
     "board":{
       "menu":"//h4[contains(.,'Board')]",
@@ -139,7 +140,15 @@
       "folder_save":"//button[contains(.,'Save')]",
       "folder_list":".css-i8zq64",
       "folder_input":"PrivateSwitchBase-input",
-      "folder_checkbox":"//div[2]/div[%s]/div[2]/div[3]/p"
+      "folder_checkbox":"//div[2]/div[%s]/div[2]/div[3]/p",
+      "folder_share":".MuiGrid-root:nth-child(9) .PrivateSwitchBase-input",
+      "folder_invite":".MuiSvgIcon-colorPrimary",
+      "folder_org":"scroll-box:nth-child(2) > .MuiStack-root .anticon path",
+      "folder_open":"//div[3]/div/span",
+      "folder_delete":"//button[contains(.,'Delete Folder')]",
+      "folder_close":"//button[contains(.,'Close')]",
+      "folder_ok":"//button[contains(.,'OK')]",
+      "folder":"//h3[contains(.,'Folder')]"
     },
     "mail_excel":{
       "menu":{
@@ -917,6 +926,50 @@
               "testcase":"Create",
               "status":"Fail",
               "description":"Create folder",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+          }
+        },
+        "edit":{
+          "pass":{
+            "menu":"Board",
+            "submenu":"Settings",
+            "testcase":"Edit",
+            "status":"Pass",
+            "description":"Edit folder",
+            "date":"",
+            "tester":"Kim Quynh",
+            "sheet":"fu"
+            },
+            "fail":{
+              "menu":"Board",
+              "submenu":"Settings",
+              "testcase":"Edit",
+              "status":"Fail",
+              "description":"Edit folder",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+          }
+        },
+        "delete":{
+          "pass":{
+            "menu":"Board",
+            "submenu":"Settings",
+            "testcase":"Delete",
+            "status":"Pass",
+            "description":"Delete folder",
+            "date":"",
+            "tester":"Kim Quynh",
+            "sheet":"fu"
+            },
+            "fail":{
+              "menu":"Board",
+              "submenu":"Settings",
+              "testcase":"Delete",
+              "status":"Fail",
+              "description":"Delete folder",
               "date":"",
               "tester":"Kim Quynh",
               "sheet":"fu"

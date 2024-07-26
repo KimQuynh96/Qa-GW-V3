@@ -1,0 +1,23 @@
+LOGIN
+Input ID
+Input Pass
+Click on button login
+MENU MAIL
+Click on menu Mail
+Settings
+MENU BOARD
+Click on menu Board
+Settings
+Click on sub menu Settings
+Folders : Add
+Input folder name
+Click on button save
+Create folder
+Folders : Edit
+Input name edit
+Click on button save edit
+Edit folder
+Folders : Delete
+Click on button delete
+Click on button OK
+Delete folder

@@ -2,30 +2,6 @@ from gw_v3_set_up import driver,data,Keys,EC,By,WebDriverWait,json,File,os,Param
 from gw_v3_functions import commons, time
 
 
-
-def Task():
-# Luu ################
-    driver.find_element_by_xpath("//h4[contains(.,'Task')]").click()
-    time.sleep(3)
-    driver.find_element_by_css_selector(".MuiButton-contained").click()
-    driver.find_element_by_xpath("//form/div/div/div[2]/div/div[2]/div/div/div/input").send_keys("Test")
-    driver.find_element_by_xpath("//button[contains(@title,'Table')]").click()
-    time.sleep(1)
-    driver.find_element_by_xpath("//div[contains(@class,'tox-collection__group')]//div[contains(@class,'tox-menu-nav__js tox-collection__item tox-collection__item--active')]//div[contains(@class,'tox-collection__item-caret')]").click()
-    driver.find_element_by_xpath("//div[contains(@class,'tox-collection__group')]//div[25]").click()
-    
-    commons.SwitchToFrameEditor(data["editor_frame"])
-    text = driver.find_element_by_xpath("//tbody/tr[1]/td[1]")
-    text.send_keys("quynh")
-    commons.SwitchToDefaultContent()
-    
-    driver.find_element_by_xpath("//button[contains(.,'Save')]").click()
-    print("oki")
-    
-    
-    
-    ###########
-
 def AccessMail():
     commons.Title("MENU MAIL")
     commons.ClickElementWithXpath(data["mail"]["menu"])
@@ -754,7 +730,7 @@ def Settings():
     driver.switch_to.frame(commons.FindElementById("newMailIframe"))
     
     driver.find_element_by_xpath(data["mail"]["setting"]).click()
-    if commons.IsDisplayedByXpath(data["mail"]["settings"]) == True :
+    if commons.IsDisplayedByXpath(data["mail"]["signature"]) == True :
         Settings = True
         commons.WriteOnExcel(data["mail_excel"]["setting"]["access"]["pass"])
     else :
@@ -836,4 +812,4 @@ def MenuMail():
     if  Access == True :
         Settings()
     
-    #Task()
+    
