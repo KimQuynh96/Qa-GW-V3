@@ -1,0 +1,927 @@
+{   "id":":r%s:",
+    "btn":":r%s:",
+    "date_hour":"%s[%s]",
+    "domain":"https://%s/groupware-v3/login",
+    "PASS" :"[PASS]%s",
+    "FAIL" :"[FAIL]%s",
+    "FailCase":"[FAILED TEST CASE] %s \n",
+    "arlet_save":"Toastify__toast-body",
+    "editor_frame":"tox-edit-area__iframe",
+    "editor_input":"//body[@id='tinymce']",
+    "sig_text": "Công Ty TNHH Hanbiro \n E-Mail : vu@hanbiro.com \n Tel : + 84 (08) 541 063 28 / Fax: 02)6919-2050 \n Address : Lầu 3, tòa nhà Phúc Tấn Nguyên 400 Nguyễn Thị Thập, Phường Tân Quy, Quận 7, Tp Hồ Chí Minh",
+
+    "title" : {
+      "1":"Menu",
+      "2":"Sub Menu",
+      "3":"Test Case Name",
+      "4":"Status",
+      "5":"Description",
+      "6":"Date",
+      "7":"Tester"
+      },
+    "mail":{
+        "menu":"//h4[contains(.,'Mail')]",
+        "compose":"//button[contains(.,'Compose')]",
+        "setting" :"//span[contains(.,'Settings')]",
+        "settings":"//div[contains(text(),'Settings')]",
+        "reply_to":"//input[@id='Reply-To']",
+        "mail_to":"automationtest@vndev.hanbiro.com",
+        "setting_save":"//span[contains(.,'Save')]",
+        "signature":"//span[contains(.,'Signature')]",
+        "sig_line":"//span[contains(.,'Enable Use line')]",
+        "sig_btn":"//button[contains(.,'Add')]",
+        "sig_attach":".display-4",
+        "sig_text":"(//input[@name='signature-radio'])[2]",
+        "sig_img":"//input[@name='signature-radio']",
+        "sig_html":"tinymce",
+        "sig_iframe":"//iframe[@id='tiny-react_83659703311721203953355_ifr']",
+        "sig_save":"//span[contains(.,'Save')]",
+        "sig_input":"//input[starts-with(@type,'checkbox')]",
+        "sig_name":"//div/div[%s]/div/div/label",
+        "sig_checkbox":"//div/div[%s]/div/div/input",
+        "sig_delete":"//span[contains(.,'Delete')]",
+        "auto_sort":"//span[contains(.,'Auto-Sort')]",
+        "auto_btn":".write-form > .btn",
+        "auto_from":"taskname",
+        "auto_from_email":"automationtest1@vndev.hanbiro.com",
+        "auto_to":"(//input[@id='taskname'])[2]",
+        "auto_to_email":"automationtest@vndev.hanbiro.com",
+        "auto_subject":"(//input[@id='taskname'])[3]",
+        "auto_save":"//span[contains(.,'Save')]",
+        "auto_table":"//tbody",
+        "vaca_auto":"//span[contains(.,'Vacation Auto-Replies')]",
+        "vaca_mess":"taskname",
+        "vaca_on":".react-switch-bg",
+        "vaca_save":"//button[contains(.,'Save')]",
+        "block":"//span[contains(.,'Blocked Addresses')]",
+        "block_add":"//span[contains(.,'Block Address')]",
+        "block_input":"autoSizingInputGroup",
+        "block_text":"automationtest2@vndev.hanbiro.com",
+        "block_search":"search-user",
+        "block_email":"//tbody/tr[%s]/td[2]/label",
+        "block_checkbox":"//tbody/tr[%s]/td/input",
+        "block_delete":"//span[contains(.,' Delete')]",
+        "block_data":"//h4[contains(.,'No data was found.')]",
+        "folder":"//div[@id='layout-wrapper']/div[2]/div/div/div/div/div/ul/li[7]/div/a/span",
+        "folder_box":"//li[contains(.,'Shared Mailbox')]",
+        "folder_add":"//span[contains(.,'Add Folder')]",
+        "folder_reset":"//span[contains(.,'Reset')]",
+        "folder_input":".col-lg-9 > .form-control",
+        "folder_save":"//button[contains(.,'Save')]",
+        "folder_folders":"//a[contains(text(),'Folders')]",
+        "folder_list":"//div[starts-with(@class,'list-folder')]",
+        "folder_item":"//div[starts-with(@class,'container-item')]",
+        "folder_name":"//div[starts-with(@class,'list-folder')]/div[%s]/div/span[2]",
+        "folder_no":"//h4[contains(.,'No Data')]",
+        "folder_search":".search-folder",
+        "folder_left":"//ul[@id='side-menu']/ul[2]",
+        "folder_left_name":"//li[%s]/div/a/span/span",
+        "folder_delete":"//span[contains(.,'Delete')]",
+        "folder_backup":"//span[contains(.,'Backup')]",
+        "folder_upload":"//span[contains(.,'Upload Eml')]",
+        "folder_clouddisk":"//li[contains(.,'CloudDisk')]",
+        "folder_file":"//span[contains(.,'Drag files here to upload')]",
+        "folder_file_save":".w-100 > .btn-primary > .han-h4",
+        "folder_file_discard":".w-100 > .btn-secondary > .han-h4",
+        "folder_empty":"//button[contains(.,'Empty Mailbox')]",
+        "folder_empty_save":"//span/button/span",
+        "folder_empty_discard":"//span/button[2]/span",
+        "folder_share":"//button[contains(.,'Share')]",
+        "folder_position":"position",
+        "folder_org":"ztree",
+        "forwar":"//span[contains(.,'Forwarding')]",
+        "forwar_add":".mdi-plus",
+        "forwar_save":"//span[contains(.,'Save')]",
+        "forwar_task":"taskname",
+        "forwar_text":"automationtest1@vndev.hanbiro.com,automationtest2@vndev.hanbiro.com",
+        "forwar_table":"//tbody",
+        "forwar_name":"//tbody/tr[%s]/td[2]/label",
+        "forwar_checkbox":"//tbody/tr[%s]/td/input",
+        "forwar_delete":"//span[contains(.,' Delete')]",
+        "forwar_no":"//h4[contains(.,'No data was found.')]",
+        "forwar_email_1":"automationtest1@vndev.hanbiro.com",
+        "forwar_email_2":"automationtest2@vndev.hanbiro.com",
+        "white":"//span[contains(.,'Whitelist')]",
+        "white_input":"autoSizingInputGroup",
+        "white_email":"automationtest2@vndev.hanbiro.com",
+        "white_add":".mdi-plus",
+        "white_no":"//h4[contains(.,'No data was found.')]",
+        "white_table":"//tbody",
+        "white_name":"//tbody/tr[%s]/td[2]/label",
+        "white_checkbox":"//tbody/tr[%s]/td/input",
+        "white_delete":"//span[contains(.,' Delete')]",
+        "smtp":"//span[contains(.,'SMTP-POP3-IMAP')]",
+        "smtp_save":"//span[contains(.,'Save')]",
+        "alias":"//span[contains(.,'Alias Accounts')]",
+        "alias_search":"search-user",
+        "comp":"//span[contains(.,'Auto-Complete Setting')]",
+        "comp_reset":"//span[contains(.,'Reset')]",
+        "fetching":"//span[contains(.,'Mail Fetching')]",
+        "fetching_pass":"(//input[@name='passwd'])[2]",
+        "org_open":"//li[%s]/span",
+        "org_list":"//li[%s]/ul",
+        "org_list_sub":"//li[%s]/ul/li[%s]/span", 
+        "org_list_user":"//ul/li[%s][starts-with(@class,'level2')]",
+        "org_user":"//ul/li[%s][starts-with(@class,'level2')]/a/input",
+        "org_add":".btn-add-user > .cursor-pointer",
+        "org_save":".justify-content-end > .me-2",
+        "org_share":"//span[contains(.,'Save')]",
+        "org_list_share":".px-2 > span:nth-child(1)"
+        
+    },
+    "board":{
+      "menu":"//h4[contains(.,'Board')]",
+      "write":"//button[contains(.,'Write Board')]",
+      "setting":"Settings",
+      "folder_btn":"//button[contains(.,'New Folder')]",
+      "folder_name":"//div[2]/div/div/div/input",
+      "folder_des":".MuiInputBase-multiline",
+      "folder_save":"//button[contains(.,'Save')]",
+      "folder_list":".css-i8zq64",
+      "folder_input":"PrivateSwitchBase-input",
+      "folder_checkbox":"//div[2]/div[%s]/div[2]/div[3]/p"
+    },
+    "mail_excel":{
+      "menu":{
+        "pass":{
+          "menu":"Mail",
+          "submenu":"Menu",
+          "testcase":"Access menu",
+          "status":"Pass",
+          "description":"Click on menu Mail",
+          "date":"",
+          "tester":"Kim Quynh",
+          "sheet":"ac"
+          },
+          "fail":{
+            "menu":"Mail",
+            "submenu":"Menu",
+            "testcase":"Access menu",
+            "status":"Fail",
+            "description":"Click on menu Mail",
+            "date":"",
+            "tester":"Kim Quynh",
+            "sheet":"ac"
+          }
+      },
+      "setting":{
+        "access":{
+          "pass":{
+            "menu":"Mail",
+            "submenu":"Settings",
+            "testcase":"Access sub menu ",
+            "status":"Pass",
+            "description":"Click on sub menu Settings",
+            "date":"",
+            "tester":"Kim Quynh",
+            "sheet":"ac"
+            },
+            "fail":{
+              "menu":"Mail",
+              "submenu":"Settings",
+              "testcase":"Access sub menu ",
+              "status":"Fail",
+              "description":"Click on sub menu Settings",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+            }
+        },
+        "writing":{
+            "pass":{
+            "menu":"Mail",
+            "submenu":"Writing ",
+            "testcase":"Writing setting",
+            "status":"Pass",
+            "description":"Writing setting",
+            "date":"",
+            "tester":"Kim Quynh",
+            "sheet":"fu"
+            },
+            "fail":{
+              "menu":"Mail",
+              "submenu":"Writing ",
+              "testcase":"Writing setting",
+              "status":"Fail",
+              "description":"Writing setting",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+            }
+        },
+        "signature":{
+            "access":{
+              "pass":{
+              "menu":"Mail",
+              "submenu":"Signature",
+              "testcase":"Access sub menu ",
+              "status":"Pass",
+              "description":"Click on sub menu signature",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+              },
+              "fail":{
+                "menu":"Mail",
+                "submenu":"Signature",
+                "testcase":"Access sub menu ",
+                "status":"Fail",
+                "description":"Click on sub menu signature",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"ac"
+              }
+          },
+          "create":{
+            "pass":{
+            "menu":"Mail",
+            "submenu":"Signature",
+            "testcase":"Create ",
+            "status":"Pass",
+            "description":"Create signature is text",
+            "date":"",
+            "tester":"Kim Quynh",
+            "sheet":"fu"
+            },
+            "fail":{
+              "menu":"Mail",
+              "submenu":"Signature",
+              "testcase":"Create",
+              "status":"Fail",
+              "description":"Create signature is text",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+            }
+          },
+          "delete":{
+            "pass":{
+            "menu":"Mail",
+            "submenu":"Signature",
+            "testcase":"Delete ",
+            "status":"Pass",
+            "description":"Delete signature ",
+            "date":"",
+            "tester":"Kim Quynh",
+            "sheet":"fu"
+            },
+            "fail":{
+              "menu":"Mail",
+              "submenu":"Signature",
+              "testcase":"Delete ",
+              "status":"Fail",
+              "description":"Delete signature",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+            }
+          }
+        },
+        "auto":{
+          "access":{
+              "pass":{
+              "menu":"Mail",
+              "submenu":"Auto Sort",
+              "testcase":"Access sub menu ",
+              "status":"Pass",
+              "description":"Click on sub menu Auto Sort",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+              },
+              "fail":{
+              "menu":"Mail",
+              "submenu":"Auto Sort",
+              "testcase":"Access sub menu ",
+              "status":"Fail",
+              "description":"Click on sub menu Auto Sort",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+              }
+          },
+          "create":{
+            "pass":{
+              "menu":"Mail",
+              "submenu":"Auto Sort",
+              "testcase":"Create ",
+              "status":"Pass",
+              "description":"Create auto sort",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+              },
+              "fail":{
+                "menu":"Mail",
+                "submenu":"Auto Sort",
+                "testcase":"Create ",
+                "status":"Fail",
+                "description":"Create auto sort",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              }
+          }
+        },
+        "vacation":{
+          "access":{
+              "pass":{
+              "menu":"Mail",
+              "submenu":"Vacation Auto-Replies",
+              "testcase":"Access sub menu ",
+              "status":"Pass",
+              "description":"Click on sub menu Auto-Replies",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+              },
+              "fail":{
+                "menu":"Mail",
+              "submenu":"Vacation Auto-Replies",
+              "testcase":"Access sub menu ",
+              "status":"Fail",
+              "description":"Click on sub menu Auto-Replies",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+              }
+          },
+          "create":{
+              "pass":{
+              "menu":"Mail",
+              "submenu":"Vacation Auto-Replies",
+              "testcase":"Create ",
+              "status":"Pass",
+              "description":"Create Vacation Auto-Replies",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+              },
+              "fail":{
+                "menu":"Mail",
+              "submenu":"Auto Sort",
+              "testcase":"Create ",
+              "status":"Fail",
+              "description":"Create Vacation Auto-Replies",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+              }
+          }
+        },
+        "block":{
+          "access":{
+              "pass":{
+                "menu":"Mail",
+                "submenu":"Blocked Addresses",
+                "testcase":"Access sub menu ",
+                "status":"Pass",
+                "description":"Click on sub menu Blocked Addresses",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"ac"
+              },
+              "fail":{
+                "menu":"Mail",
+                "submenu":"Blocked Addresses",
+                "testcase":"Access sub menu ",
+                "status":"Fail",
+                "description":"Click on sub menu Blocked Addresses",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"ac"
+              }
+          },
+          "create":{
+              "pass":{
+                "menu":"Mail",
+                "submenu":"Blocked Addresses",
+                "testcase":"Create ",
+                "status":"Pass",
+                "description":"Create Blocked Addresses",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              },
+              "fail":{
+                "menu":"Mail",
+                "submenu":"Blocked Addresses",
+                "testcase":"Create ",
+                "status":"Fail",
+                "description":"Create Blocked Addresses",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              }
+          }
+        },
+        "folder":{
+          "access":{
+              "pass":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Access sub menu ",
+                "status":"Pass",
+                "description":"Click on sub menu Folder",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"ac"
+              },
+              "fail":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Access sub menu ",
+                "status":"Fail",
+                "description":"Click on sub menu Folder",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"ac"
+              }
+          },
+          "create":{
+              "pass":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Create ",
+                "status":"Pass",
+                "description":"Create Folder",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              },
+              "fail":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Create ",
+                "status":"Fail",
+                "description":"Create Folder",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              }
+          },
+          "display":{
+              "pass":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Show Folder",
+                "status":"Pass",
+                "description":"Folder show left menu",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              },
+              "fail":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Show Folder",
+                "status":"Fail",
+                "description":"Folder show left menu",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              }
+          },
+          "modify":{
+              "pass":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Modify ",
+                "status":"Pass",
+                "description":"Modify Folder",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              },
+              "fail":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Modify ",
+                "status":"Fail",
+                "description":"Modify Folder",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              }
+          },
+          "delete":{
+              "pass":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Delete ",
+                "status":"Pass",
+                "description":"Delete Folder",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              },
+              "fail":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Delete ",
+                "status":"Fail",
+                "description":"Delete Folder",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              }
+          },
+          "backup":{
+              "pass":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Backup ",
+                "status":"Pass",
+                "description":"Backup Folder",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              },
+              "fail":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Backup ",
+                "status":"Fail",
+                "description":"Backup Folder",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              }
+          },
+          "upload":{
+              "pass":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Upload Eml ",
+                "status":"Pass",
+                "description":"Upload Eml",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              },
+              "fail":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Upload Eml ",
+                "status":"Fail",
+                "description":"Upload Eml",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              }
+          },
+          "empty":{
+              "pass":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Empty Mailbox",
+                "status":"Pass",
+                "description":"Empty Mailbox",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              },
+              "fail":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Empty Mailbox ",
+                "status":"Fail",
+                "description":"Empty Mailbox",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              }
+          },
+          "share":{
+              "pass":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Share folder",
+                "status":"Pass",
+                "description":"Share folder",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              },
+              "fail":{
+                "menu":"Mail",
+                "submenu":"Folder",
+                "testcase":"Share folder",
+                "status":"Fail",
+                "description":"Share folder",
+                "date":"",
+                "tester":"Kim Quynh",
+                "sheet":"fu"
+              }
+          }
+        },
+        "forwar":{
+          "access":{
+              "pass":{
+              "menu":"Mail",
+              "submenu":"Forwarding",
+              "testcase":"Access sub menu ",
+              "status":"Pass",
+              "description":"Click on sub menu Forwarding",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+              },
+              "fail":{
+              "menu":"Mail",
+              "submenu":"Forwarding",
+              "testcase":"Access sub menu ",
+              "status":"Fail",
+              "description":"Click on sub menu Forwarding",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+            }
+          },
+          "create":{
+              "pass":{
+              "menu":"Mail",
+              "submenu":"Forwarding",
+              "testcase":"Create ",
+              "status":"Pass",
+              "description":"Create Forwarding",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+              },
+              "fail":{
+              "menu":"Mail",
+              "submenu":"Forwarding",
+              "testcase":"Create ",
+              "status":"Fail",
+              "description":"Create Forwarding",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+            }
+          },
+          "delete":{
+              "pass":{
+              "menu":"Mail",
+              "submenu":"Forwarding",
+              "testcase":"Delete ",
+              "status":"Pass",
+              "description":"Delete Forwarding",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+              },
+              "fail":{
+              "menu":"Mail",
+              "submenu":"Forwarding",
+              "testcase":"Delete ",
+              "status":"Fail",
+              "description":"Delete Forwarding",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+            }
+          }
+        },
+        "white":{
+          "access":{
+              "pass":{
+              "menu":"Mail",
+              "submenu":"Whitelist",
+              "testcase":"Access sub menu ",
+              "status":"Pass",
+              "description":"Click on sub menu Whitelist",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+              },
+              "fail":{
+              "menu":"Mail",
+              "submenu":"Whitelist",
+              "testcase":"Access sub menu ",
+              "status":"Fail",
+              "description":"Click on sub menu Whitelist",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+            }
+          },
+          "create":{
+              "pass":{
+              "menu":"Mail",
+              "submenu":"Whitelist",
+              "testcase":"Create ",
+              "status":"Pass",
+              "description":"Create Whitelist",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+              },
+              "fail":{
+              "menu":"Mail",
+              "submenu":"Whitelist",
+              "testcase":"Create ",
+              "status":"Fail",
+              "description":"Create Whitelist",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+            }
+          },
+          "delete":{
+              "pass":{
+              "menu":"Mail",
+              "submenu":"Whitelist",
+              "testcase":"Delete ",
+              "status":"Pass",
+              "description":"Delete Whitelist",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+              },
+              "fail":{
+              "menu":"Mail",
+              "submenu":"Whitelist",
+              "testcase":"Delete ",
+              "status":"Fail",
+              "description":"Delete Whitelist",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+            }
+          }
+        },
+        "smtp":{
+          "access":{
+              "pass":{
+              "menu":"Mail",
+              "submenu":"SMTP-POP3-IMAP",
+              "testcase":"Access sub menu ",
+              "status":"Pass",
+              "description":"Click on sub menu SMTP-POP3-IMAP",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+              },
+              "fail":{
+              "menu":"Mail",
+              "submenu":"SMTP-POP3-IMAP",
+              "testcase":"Access sub menu ",
+              "status":"Fail",
+              "description":"Click on sub menu SMTP-POP3-IMAP",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+            }
+          }
+          
+        },
+        "alias":{
+          "access":{
+              "pass":{
+              "menu":"Mail",
+              "submenu":"Alias Accounts",
+              "testcase":"Access sub menu ",
+              "status":"Pass",
+              "description":"Click on sub menu Alias Accounts",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+              },
+              "fail":{
+              "menu":"Mail",
+              "submenu":"Alias Accounts",
+              "testcase":"Access sub menu ",
+              "status":"Fail",
+              "description":"Click on sub menu Alias Accounts",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+            }
+          }
+          
+        },
+        "comp":{
+          "access":{
+              "pass":{
+              "menu":"Mail",
+              "submenu":"Auto-Complete Setting",
+              "testcase":"Access sub menu ",
+              "status":"Pass",
+              "description":"Click on sub menu Auto-Complete Setting",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+              },
+              "fail":{
+              "menu":"Mail",
+              "submenu":"Auto-Complete Setting",
+              "testcase":"Access sub menu ",
+              "status":"Fail",
+              "description":"Click on sub menu Auto-Complete Setting",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+            }
+          }
+          
+        },
+        "fetching":{
+          "access":{
+              "pass":{
+              "menu":"Mail",
+              "submenu":"Mail Fetching",
+              "testcase":"Access sub menu ",
+              "status":"Pass",
+              "description":"Click on sub menu Mail Fetching",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+              },
+              "fail":{
+              "menu":"Mail",
+              "submenu":"Mail Fetching",
+              "testcase":"Access sub menu ",
+              "status":"Fail",
+              "description":"Click on sub menu Mail Fetching",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+            }
+          }
+          
+        }
+
+      }
+    },
+    "board_excel":{
+      "menu":{
+        "pass":{
+          "menu":"Board",
+          "submenu":"Menu",
+          "testcase":"Access menu",
+          "status":"Pass",
+          "description":"Click on menu Board",
+          "date":"",
+          "tester":"Kim Quynh",
+          "sheet":"ac"
+          },
+          "fail":{
+            "menu":"Board",
+            "submenu":"Menu",
+            "testcase":"Access menu",
+            "status":"Fail",
+            "description":"Click on menu Board",
+            "date":"",
+            "tester":"Kim Quynh",
+            "sheet":"ac"
+          }
+      },
+      "setting":{
+        "access":{
+          "pass":{
+            "menu":"Board",
+            "submenu":"Settings",
+            "testcase":"Access sub menu ",
+            "status":"Pass",
+            "description":"Click on sub menu Settings",
+            "date":"",
+            "tester":"Kim Quynh",
+            "sheet":"ac"
+            },
+            "fail":{
+              "menu":"Board",
+              "submenu":"Settings",
+              "testcase":"Access sub menu ",
+              "status":"Fail",
+              "description":"Click on sub menu Settings",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"ac"
+          }
+        },
+        "create":{
+          "pass":{
+            "menu":"Board",
+            "submenu":"Settings",
+            "testcase":"Create",
+            "status":"Pass",
+            "description":"Create folder",
+            "date":"",
+            "tester":"Kim Quynh",
+            "sheet":"fu"
+            },
+            "fail":{
+              "menu":"Board",
+              "submenu":"Settings",
+              "testcase":"Create",
+              "status":"Fail",
+              "description":"Create folder",
+              "date":"",
+              "tester":"Kim Quynh",
+              "sheet":"fu"
+          }
+        }
+      }
+    }
+}
