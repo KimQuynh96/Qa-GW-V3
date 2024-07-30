@@ -9,7 +9,7 @@
     "editor_frame":"tox-edit-area__iframe",
     "editor_input":"//body[@id='tinymce']",
     "sig_text": "Công Ty TNHH Hanbiro \n E-Mail : vu@hanbiro.com \n Tel : + 84 (08) 541 063 28 / Fax: 02)6919-2050 \n Address : Lầu 3, tòa nhà Phúc Tấn Nguyên 400 Nguyễn Thị Thập, Phường Tân Quy, Quận 7, Tp Hồ Chí Minh",
-
+    "page":".han-caption:nth-child(1)",
     "title" : {
       "1":"Menu",
       "2":"Sub Menu",
@@ -41,7 +41,7 @@
         "sig_checkbox":"//div/div[%s]/div/div/input",
         "sig_delete":"//span[contains(.,'Delete')]",
         "auto_sort":"//span[contains(.,'Auto-Sort')]",
-        "auto_btn":".write-form > .btn",
+        "auto_btn":"//button[contains(.,'Add')]",
         "auto_from":"taskname",
         "auto_from_email":"automationtest1@vndev.hanbiro.com",
         "auto_to":"(//input[@id='taskname'])[2]",
@@ -54,7 +54,7 @@
         "vaca_on":".react-switch-bg",
         "vaca_save":"//button[contains(.,'Save')]",
         "block":"//span[contains(.,'Blocked Addresses')]",
-        "block_add":"//span[contains(.,'Block Address')]",
+        "block_add":"//button[@id='']//i[@id='']",
         "block_input":"autoSizingInputGroup",
         "block_text":"automationtest2@vndev.hanbiro.com",
         "block_search":"search-user",
@@ -102,6 +102,7 @@
         "forwar_email_1":"automationtest1@vndev.hanbiro.com",
         "forwar_email_2":"automationtest2@vndev.hanbiro.com",
         "white":"//span[contains(.,'Whitelist')]",
+        "white_search":"search-user",
         "white_input":"autoSizingInputGroup",
         "white_email":"automationtest2@vndev.hanbiro.com",
         "white_add":".mdi-plus",
@@ -148,7 +149,11 @@
       "folder_delete":"//button[contains(.,'Delete Folder')]",
       "folder_close":"//button[contains(.,'Close')]",
       "folder_ok":"//button[contains(.,'OK')]",
-      "folder":"//h3[contains(.,'Folder')]"
+      "folder":"//h3[contains(.,'Folder')]",
+      "folder_depart":"css-ngt4ed",
+      "folder_depart_click":"//div[%s]/div/span",
+      "folder_sub_click":".css-1cpozrv > .MuiStack-root:nth-child(%s) .anticon > svg",
+      "folder_user":".MuiBox-root:nth-child(4) > .MuiBox-root > .MuiStack-root:nth-child(%s) .PrivateSwitchBase-input"
     },
     "mail_excel":{
       "menu":{

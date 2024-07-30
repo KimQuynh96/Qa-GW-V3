@@ -87,11 +87,12 @@ def Folder():
                     break
                 j += 1
         
-        '''
+        
         # Share Folder #
         if Create == True :
             commons.Title("Folders : Share")
             j = 1
+            Select_User = False
             while j <= List_Name :
                 Find = List_Folder.find_element_by_xpath(data["board"]["folder_checkbox"] % str(j))
                 Name = Find.text
@@ -106,7 +107,42 @@ def Folder():
                     
                     time.sleep(1)
                     Global = driver.find_element_by_class_name("css-qa6tqs")
-                    Global.find_element_by_xpath(data["board"]["folder_open"]).click()
+                    time.sleep(3)
+                    Total_Depart = Global.find_elements_by_class_name(data["board"]["folder_depart"])
+                    Total_Depart = commons.TotalData(Total_Depart)
+                    i = 3
+                    m = 1
+                    while i <= Total_Depart :
+                        print(i)
+                        Global.find_element_by_xpath(data["board"]["folder_depart_click"] % str(i)).click()
+                        Sub_Depart = Global.find_element_by_class_name("css-1cpozrv")
+                        Total_Sub = Sub_Depart.find_elements_by_class_name(data["board"]["folder_depart"])
+                        Total_Sub = commons.TotalData(Total_Sub)
+                        Total_Sub = Total_Sub *2 + 1
+                        
+                        while m <= Total_Sub :
+                            time.sleep(5)
+                            Sub_Depart = Global.find_element_by_class_name("css-1cpozrv")
+                            Sub_Depart.find_element_by_css_selector(data["board"]["folder_sub_click"] % str(m)).click()
+                            Sub_Sub_Depart = Sub_Depart.find_element_by_class_name("css-1cpozrv")
+                            time.sleep(3)
+                            Total_user = Sub_Sub_Depart.find_elements_by_class_name("css-tw0q3e")
+                            Total_user = commons.TotalData(Total_user)
+                            if Total_user > 1 :
+                                Select_User = True
+                                Sub_Sub_Depart.find_element_by_css_selector(data["board"]["folder_user"] % str(1)).click()
+                                break
+                            
+                            if  Select_User == True :
+                                break
+                            
+                            m +=2
+                        
+                        if  Select_User == True :
+                            break
+                        i += 2
+                        
+                    #Global.find_element_by_xpath(data["board"]["folder_open"]).click()
                 j += 1
         '''          
         # Delete Folder #
@@ -132,6 +168,7 @@ def Folder():
                     commons.WriteOnExcel(data["board_excel"]["setting"]["delete"]["fail"])
             else :
                 commons.WriteOnExcel(data["board_excel"]["setting"]["delete"]["fail"])
+        '''
     else :
         commons.WriteOnExcel(data["board_excel"]["setting"]["create"]["fail"])
 

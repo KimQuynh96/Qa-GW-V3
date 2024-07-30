@@ -5,11 +5,12 @@ from gw_v3_board import MenuBoard
 def run(domain,user,password) :
     Check_login = Login(domain,user,password)
     if  Check_login == True :
-        MenuMail()
+        #MenuMail()
         MenuBoard()
         
         
-run("global3.hanbiro.com","automationtest","automationtest1!")
+        
+run("vndev.hanbiro.com","automationtest","automationtest1!")
 
 
 

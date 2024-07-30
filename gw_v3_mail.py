@@ -93,6 +93,7 @@ def Signature():
                     commons.WriteOnExcel(data["mail_excel"]["setting"]["signature"]["create"]["fail"])   
                     
             # Delete Signature 
+            commons.Title("Signature  : Delete")
             if Save == True :
                 time.sleep(1)
                 Total_Delete = driver.find_elements_by_xpath(data["mail"]["sig_input"])
@@ -123,7 +124,7 @@ def Signature():
 def AutoSort():
     commons.Title("Auto Sort")
     commons.ClickElementWithXpath(data["mail"]["auto_sort"])
-    if  commons.IsDisplayedByCss(data["mail"]["auto_btn"]) == True :
+    if  commons.IsDisplayedByXpath(data["mail"]["auto_btn"]) == True :
         Access = True 
         commons.WriteOnExcel(data["mail_excel"]["setting"]["auto"]["access"]["pass"])
     else :
@@ -136,7 +137,7 @@ def AutoSort():
         Total_Before =  Table.find_elements_by_tag_name("tr")
         Total_Before =  commons.TotalData(Total_Before) + 1
         
-        driver.find_element_by_css_selector(data["mail"]["auto_btn"]).click()
+        driver.find_element_by_xpath(data["mail"]["auto_btn"]).click()
         commons.Content("Click on button add")
         time.sleep(2)
         driver.find_element_by_id(data["mail"]["auto_from"]).send_keys(data["mail"]["auto_from_email"])
@@ -603,6 +604,13 @@ def Forwarding():
                                 commons.WriteOnExcel(data["mail_excel"]["setting"]["forwar"]["delete"]["fail"])
 
 
+def WhitelistTotal():
+    time.sleep(1)
+    Page = driver.find_element_by_css_selector(data["page"]).text
+    Total_Before = (Page[int(Page.rfind("l"))+1: int(Page.rfind(" |"))])
+    Total_Before = int(Total_Before)
+    return Total_Before
+
 def Whitelist():
     commons.Title("Whitelist")
     commons.ClickElementWithXpath(data["mail"]["white"])
@@ -615,74 +623,69 @@ def Whitelist():
         commons.WriteOnExcel(data["mail_excel"]["setting"]["white"]["access"]["fail"])
     
     if  Access == True :
+        Delete = False
+        Total_Before = WhitelistTotal()
+        if commons.IsDisplayedByXpath(data["mail"]["white_no"]) == True : 
+            commons.Content("No data to delete")
         
-        if commons.IsDisplayedByXpath(data["mail"]["white_no"]) == False :
-            
-            Table = driver.find_element_by_xpath(data["mail"]["white_table"])
-            Total =  Table.find_elements_by_tag_name("tr")
-            Total =  commons.TotalData(Total)
-            
-            i = 1
-            while i <= Total :
-                Email = driver.find_element_by_xpath(data["mail"]["white_name"] % str(i)).text
-                if  Email == data["mail"]["white_email"] :
-                    commons.Title("Whitelist : Delete")
-                    driver.find_element_by_xpath(data["mail"]["white_checkbox"] % str(i)).click()
-                    commons.Content("Click on checkbox")
-                    driver.find_element_by_xpath(data["mail"]["white_delete"]).click()
-                    commons.Content("Click on button delete")
-
-                    if  Total == 1 :
-                        if commons.IsDisplayedByXpath(data["mail"]["white_no"]) == True :
-                            commons.WriteOnExcel(data["mail_excel"]["setting"]["white"]["delete"]["pass"])
-                        else :
-                            commons.WriteOnExcel(data["mail_excel"]["setting"]["white"]["delete"]["fail"])
-                    else :
-                        Delete = False
-                        j = 1
-                        try :
-                            while j <= Total :
-                                Email = driver.find_element_by_xpath(data["mail"]["white_name"] % str(j)).text
-                                if Email == data["mail"]["white_email"] :
-                                    Delete = True
-                                    commons.WriteOnExcel(data["mail_excel"]["setting"]["white"]["delete"]["fail"])
-                                    break
-                                j += 1
-                            if  Delete == True :
-                                commons.WriteOnExcel(data["mail_excel"]["setting"]["white"]["delete"]["fail"])
-                        except :
-                            pass
-                i +=1
-        
-        
-        commons.Title("Whitelist : Add")     
-        driver.find_element_by_id(data["mail"]["white_input"]).send_keys(data["mail"]["white_email"])
-        commons.Content("Input Whitelist")
-        
-        driver.find_element_by_css_selector(data["mail"]["white_add"]).click()
-        commons.Content("Click on button add")
-        
-        if commons.IsDisplayedByXpath(data["mail"]["white_no"]) == True :
-            commons.WriteOnExcel(data["mail_excel"]["setting"]["white"]["create"]["fail"])
         else :
-            Table = driver.find_element_by_xpath(data["mail"]["white_table"])
-            Total =  Table.find_elements_by_tag_name("tr")
-            Total =  commons.TotalData(Total)
+            Search = driver.find_element_by_id(data["mail"]["white_search"])
+            Search.send_keys(data["mail"]["white_email"])
+            Search.send_keys(Keys.ENTER)
+            if commons.IsDisplayedByXpath(data["mail"]["white_no"]) != True :
+                i = 1 
+                Search_Before = WhitelistTotal()
+                while i <= Search_Before :
+                    Email = driver.find_element_by_xpath(data["mail"]["white_name"] % str(i)).text
+                    Find_Email = (Email.rfind(data["mail"]["white_email"]))
+                    if  Find_Email != -1 :
+                        commons.Title("Whitelist : Delete")
+                        driver.find_element_by_xpath(data["mail"]["white_checkbox"] % str(i)).click()
+                        commons.Content("Click on checkbox")
+                        driver.find_element_by_xpath(data["mail"]["white_delete"]).click()
+                        commons.Content("Click on button delete")
+                        
+                        if  Search_Before == 1 :
+                            if commons.IsDisplayedByXpath(data["mail"]["white_no"]) == True :
+                                Delete = True
+                                commons.WriteOnExcel(data["mail_excel"]["setting"]["white"]["delete"]["pass"])
+                                break
+                            else :
+                                commons.WriteOnExcel(data["mail_excel"]["setting"]["white"]["delete"]["fail"])
+                        else :
+                            Search_After = WhitelistTotal()
+                            if  Search_Before == Search_After + 1 :
+                                Delete = True
+                                commons.WriteOnExcel(data["mail_excel"]["setting"]["white"]["delete"]["pass"])
+                                break
+                            else :
+                                commons.WriteOnExcel(data["mail_excel"]["setting"]["white"]["delete"]["fail"])
+                    i += 1        
+
+            time.sleep(1)
+            Search.send_keys(Keys.CONTROL + "a");
+            Search.send_keys(Keys.DELETE)
+            Search.send_keys(Keys.RETURN)
+            if  Delete == True :
+                Total_Before = Total_Before - 1
             
-            i = 1
-            Create = False
-            while i <= Total :
-                Email = driver.find_element_by_xpath(data["mail"]["white_name"] % str(i)).text
-                if Email == data["mail"]["white_email"] :
-                    Create = True
-                    commons.WriteOnExcel(data["mail_excel"]["setting"]["white"]["create"]["pass"])
-                    break
-                i +=1
+            commons.Title("Whitelist : Add")     
+            driver.find_element_by_id(data["mail"]["white_input"]).send_keys(data["mail"]["white_email"])
+            commons.Content("Input Whitelist")
             
-            if  Create == False :
+            driver.find_element_by_css_selector(data["mail"]["white_add"]).click()
+            commons.Content("Click on button add")
+            
+            if commons.IsDisplayedByXpath(data["mail"]["white_no"]) == True :
                 commons.WriteOnExcel(data["mail_excel"]["setting"]["white"]["create"]["fail"])
-
-
+            else :
+                Total_After = WhitelistTotal()
+                if Total_After == Total_Before + 1 :
+                    commons.WriteOnExcel(data["mail_excel"]["setting"]["white"]["create"]["pass"])
+                else :
+                    commons.WriteOnExcel(data["mail_excel"]["setting"]["white"]["create"]["fail"])
+        
+        
 def SmtpPop3Imap():
     commons.Title("SMTP-POP3-IMAP")
     commons.ClickElementWithXpath(data["mail"]["smtp"])
@@ -768,11 +771,6 @@ def Settings():
             commons.CaseFail("Error Xpath : Blocked Addresses")
             
         try :
-            Folders()
-        except:
-            commons.CaseFail("Error Xpath : Folders")
-        
-        try :
             Forwarding()
         except:
             commons.CaseFail("Error Xpath : Forwarding")
@@ -801,6 +799,12 @@ def Settings():
             MailFetching()
         except:
             commons.CaseFail("Error Xpath : Mail Fetching")
+            
+        try :
+            Folders()
+        except:
+            commons.CaseFail("Error Xpath : Folders")
+        
         
     # Close Frame 3 - Frame open from def Signature()
     commons.SwitchToDefaultContent()
